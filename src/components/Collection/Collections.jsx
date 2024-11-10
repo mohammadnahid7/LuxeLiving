@@ -1,7 +1,7 @@
 const Collections = () => {
 	return (
 		<section className="w-full">
-			<div className="container mx-auto max-w-7xl py-24">
+			<div className="container mx-auto max-w-7xl pt-24">
 				<div className="w-full flex justify-between items-center">
 					<div className="max-w-40">
 						<div className="relative ">
@@ -107,7 +107,7 @@ const Collections = () => {
 					</div>
 					<div className="col-span-2 bg-secondary rounded-2xl">
 						<div className="p-8 h-full flex flex-col justify-center items-center">
-							<div className="badge badge-lg badge-primary py-6 px-6 text-lg text-white uppercase">
+							<div className="badge badge-lg badge-primary py-5 px-6 text-lg text-white uppercase">
 								New Collection
 							</div>
 							<h3 className="text-5xl font-semibold my-4 text-white">20% Offer</h3>
