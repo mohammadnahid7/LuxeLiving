@@ -2,17 +2,18 @@ const Navbar = () => {
 	return (
 		<>
 			<div className="fixed top-0 left-0 w-full">
+				{/* Notice */}
 				<div className="w-full bg-primary">
-					<div className="notice container mx-auto flex justify-between items-center text-white p-2">
+					<div className="notice container mx-auto max-w-7xl flex justify-between items-center text-white p-2 py-3">
 						<div className="notice-start flex justify-center items-center">
 							<p className="mr-2 text-lg">Follow Us: </p>
-							<button className="btn bg-[#ffffff12] border-[#ffffff57] btn-circle btn-sm w-6 h-10 mx-1">
+							<button className="btn bg-[#ffffff12] border-[#ffffff57]">
 								<i className="fa-brands fa-instagram text-white text-base"></i>
 							</button>
-							<button className="btn bg-[#ffffff12] border-[#ffffff57] btn-circle btn-sm w-8 h-10 mx-1">
+							<button className="btn bg-[#ffffff12] border-[#ffffff57]">
 								<i className="fa-brands fa-x-twitter text-white text-base"></i>
 							</button>
-							<button className="btn bg-[#ffffff12] border-[#ffffff57] btn-circle btn-sm w-8 h-10 mx-1">
+							<button className="btn bg-[#ffffff12] border-[#ffffff57]">
 								<i className="fa-brands fa-facebook-f text-white text-base"></i>
 							</button>
 						</div>
@@ -23,7 +24,9 @@ const Navbar = () => {
 						</div>
 					</div>
 				</div>
-				<div className="navbar bg-transparent container mx-auto">
+
+				{/* Navbar */}
+				<div className="navbar bg-transparent container mx-auto max-w-7xl text-base-200">
 					<div className="navbar-start">
 						<div className="dropdown">
 							<div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -88,10 +91,10 @@ const Navbar = () => {
 						</ul>
 					</div>
 					<div className="navbar-end">
-						<i className="fa-thin fa-magnifying-glass btn btn-sm btn-circle btn-ghost text-2xl mx-1"></i>
-						<i className="fa-thin fa-heart btn btn-sm btn-circle btn-ghost text-2xl mx-1"></i>
-						<i className="fa-thin fa-cart-shopping btn btn-sm btn-circle btn-ghost text-2xl mx-1"></i>
-						<i className="fa-thin fa-user btn btn-sm btn-circle btn-ghost text-2xl mx-1"></i>
+						<i className="fa-thin fa-magnifying-glass btn btn-sm btn-circle btn-ghost text-xl mx-1"></i>
+						<i className="fa-thin fa-heart btn btn-sm btn-circle btn-ghost text-xl mx-1"></i>
+						<i className="fa-thin fa-cart-shopping btn btn-sm btn-circle btn-ghost text-xl mx-1"></i>
+						<i className="fa-thin fa-user btn btn-sm btn-circle btn-ghost text-xl mx-1"></i>
 					</div>
 				</div>
 			</div>

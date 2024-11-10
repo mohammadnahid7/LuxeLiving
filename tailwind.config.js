@@ -9,9 +9,15 @@ export default {
 		themes: [
 			{
 				light: {
-					...require("daisyui/src/theming/themes")["light"],
 					primary: "#CF9422",
-					secondary: "#2D5355",
+					secondary: "2D5355",
+					accent: "#6ee7b7",
+					neutral: "#3E7375",
+					"base-100": "#ffffff",
+					info: "2D5355",
+					success: "#00ff00",
+					warning: "#f59e0b",
+					error: "#ff0000",
 				},
 			},
 		],
