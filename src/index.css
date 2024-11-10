@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		font-family: "Lato", serif;
+	}
+}
+@layer utilities {
+	.btn {
+		@apply rounded-full font-normal px-8;
+	}
+	.btn-primary {
+		@apply text-white;
+	}
+	.btn-lg {
+		@apply px-12;
+	}
+	.btn-sm {
+		@apply px-5;
+	}
+}
