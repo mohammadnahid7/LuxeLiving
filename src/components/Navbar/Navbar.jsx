@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
 	return (
 		<>
-			<div className="fixed top-0 left-0 w-full">
+			<div className="fixed top-0 left-0 w-full z-50">
 				{/* Notice */}
 				<div className="w-full bg-primary">
 					<div className="notice container mx-auto max-w-7xl flex justify-between items-center text-white p-2 py-3">
@@ -71,22 +73,44 @@ const Navbar = () => {
 					<div className="navbar-center hidden lg:flex">
 						<ul className="menu menu-horizontal px-1 text-lg">
 							<li>
-								<a>Home</a>
+								<NavLink to="/" className={({ isActive }) => (isActive ? "underline underline-offset-8" : "")}>
+									Home
+								</NavLink>
 							</li>
 							<li>
-								<a>Products</a>
+								<NavLink
+									to="/products"
+									className={({ isActive }) => (isActive ? "underline underline-offset-8" : "")}>
+									Products
+								</NavLink>
 							</li>
 							<li>
-								<a>Categories</a>
+								<NavLink
+									to="/categories"
+									className={({ isActive }) => (isActive ? "underline underline-offset-8" : "")}>
+									Categories
+								</NavLink>
 							</li>
 							<li>
-								<a>About Us</a>
+								<NavLink
+									to="/about"
+									className={({ isActive }) => (isActive ? "underline underline-offset-8" : "")}>
+									About Us
+								</NavLink>
 							</li>
 							<li>
-								<a>Contact Us</a>
+								<NavLink
+									to="/contact"
+									className={({ isActive }) => (isActive ? "underline underline-offset-8" : "")}>
+									Contact Us
+								</NavLink>
 							</li>
 							<li>
-								<a>Blog</a>
+								<NavLink
+									to="/blog"
+									className={({ isActive }) => (isActive ? "underline underline-offset-8" : "")}>
+									Blog
+								</NavLink>
 							</li>
 						</ul>
 					</div>
