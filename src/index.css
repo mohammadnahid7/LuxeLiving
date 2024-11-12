@@ -23,4 +23,7 @@
 	.notice-start .btn {
 		@apply p-0 w-9 min-h-2 h-9 inline-block mx-1;
 	}
+	.home-category input:checked + label {
+		@apply underline;
+	}
 }

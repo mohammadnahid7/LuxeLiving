@@ -1,7 +1,23 @@
+import { useContext, useEffect, useState } from "react";
+import { ProductContext } from "../../App";
 import ProductCard from "../common/ProductCard";
 
 const Trending = () => {
-	const products = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+	const products = useContext(ProductContext);
+	console.log(products);
+	const allCategories = new Set();
+	products.forEach((element) => {
+		allCategories.add(element.category);
+	});
+	const [categoryProducts, setCategoryProducts] = useState(products);
+
+	const handleCategoryBtn = ({ target }) => {
+		if (target.nodeName === "LABEL") {
+			const filtered = products.filter((prod) => prod.category === target.htmlFor);
+			setCategoryProducts([...filtered]);
+		}
+	};
+
 	return (
 		<section className="w-full">
 			<div className="container mx-auto max-w-7xl pt-24">
@@ -17,16 +33,19 @@ const Trending = () => {
 					</div>
 				</div>
 				<div className="mt-8">
-					<ul className="w-1/2 flex justify-between text-lg text-black">
-						<li>Bed Room</li>
-						<li className="underline underline-offset-8 text-secondary">Living Room</li>
-						<li>Dining Room</li>
-						<li>Outdoor</li>
-						<li>Indoor</li>
+					<ul className="home-category w-1/3 flex justify-between text-lg text-black" onClick={handleCategoryBtn}>
+						{[...allCategories].map((el, idx) => (
+							<li className="select-none" key={idx}>
+								<input type="radio" name="category" id={el} className="w-0" />
+								<label className="capitalize text-secondary underline-offset-4 cursor-pointer p-2" htmlFor={el}>
+									{el}
+								</label>
+							</li>
+						))}
 					</ul>
 					<div className="product-list mt-8 grid grid-cols-3 gap-8">
-						{products.map((el, idx) => (
-							<ProductCard key={idx} />
+						{categoryProducts.map((prod) => (
+							<ProductCard key={prod.sku} product={prod} />
 						))}
 					</div>
 				</div>

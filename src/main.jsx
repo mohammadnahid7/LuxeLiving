@@ -7,6 +7,7 @@ import "./index.css";
 const router = createBrowserRouter([
 	{
 		path: "/",
+		loader: () => fetch("https://dummyjson.com/products?select=title,price,discountPercentage,images"),
 		element: <App />,
 	},
 ]);
