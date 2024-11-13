@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ProductCard = ({ product }) => {
 	return (
 		<>
@@ -17,7 +19,12 @@ const ProductCard = ({ product }) => {
 				</figure>
 				<div className="card-body flex-row items-center p-6 rounded-2xl bg-secondary text-white">
 					<div className="flex-1">
-						<h2 className="card-title mb-2 max-w-64 text-nowrap truncate overflow-hidden">{product.title}</h2>
+						<Link
+							to={`product/${product.id}`}
+							state={{ title: product.title, image: product.images[0] }}
+							className="card-title mb-2 max-w-64 text-nowrap truncate overflow-hidden">
+							{product.title}
+						</Link>
 						<div className="flex justify-start items-center">
 							<span className="text-accent text-lg font-bold mr-5">${product.price}</span>
 							<span className="line-through text-base-300 opacity-50">

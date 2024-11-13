@@ -1,12 +1,8 @@
 import { createContext } from "react";
-import { useLoaderData } from "react-router-dom";
-import Collections from "./components/Collection/Collections";
-import Featured from "./components/Featured/Featured";
+import { Outlet, useLoaderData } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-import Sale from "./components/Sale/Sale";
-import Trending from "./components/Trending/Trending";
 
 export const ProductContext = createContext(0);
 
@@ -17,10 +13,7 @@ function App() {
 			<main>
 				<Navbar />
 				<Hero />
-				<Collections />
-				<Featured />
-				<Trending />
-				<Sale />
+				<Outlet />
 				<Footer />
 			</main>
 		</ProductContext.Provider>
